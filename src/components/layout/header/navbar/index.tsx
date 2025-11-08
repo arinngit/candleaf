@@ -39,12 +39,18 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-4">
-            <button className="p-2 hover:bg-gray-100 rounded-full transition-colors">
+            <Link
+              href="/auth/sign-in"
+              className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+            >
               <User className="w-6 h-6 text-gray-700" />
-            </button>
-            <button className="p-2 hover:bg-gray-100 rounded-full transition-colors">
+            </Link>
+            <Link
+              href="/cart"
+              className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+            >
               <ShoppingCart className="w-6 h-6 text-gray-700" />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

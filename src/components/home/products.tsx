@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const products = [
   { id: 1, name: "Spiced Mint", price: "9.99$", image: "/product.svg" },
@@ -24,7 +25,7 @@ export default function HomeProduct() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <Link href="/products/1" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product) => (
             <div
               key={product.id}
@@ -50,7 +51,7 @@ export default function HomeProduct() {
               </div>
             </div>
           ))}
-        </div>
+        </Link>
       </div>
     </section>
   );
